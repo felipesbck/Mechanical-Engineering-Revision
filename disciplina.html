@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disciplina | Revisão de Engenharia Mecânica</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f6fa;
+      color: #1d2939;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #12304a;
+      color: white;
+      padding: 32px 20px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 32px auto;
+      padding: 0 20px;
+    }
+
+    .bloco {
+      background: white;
+      padding: 20px;
+      margin-bottom: 16px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px #00000012;
+    }
+
+    .bloco h2 {
+      color: #176b87;
+      margin-top: 0;
+    }
+
+    a {
+      color: #176b87;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: #667085;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <p id="dominio"></p>
+    <h1 id="titulo">Disciplina</h1>
+    <p>Revisão de Engenharia Mecânica</p>
+  </header>
+
+  <main>
+    <section class="bloco">
+      <h2>Sobre esta disciplina</h2>
+      <p id="introducao">O material de estudo desta disciplina será organizado aqui.</p>
+    </section>
+
+    <section class="bloco">
+      <h2>Roteiro de estudo</h2>
+      <p>Esta página poderá reunir conceitos fundamentais, equações, exemplos resolvidos e exercícios.</p>
+      <p>Vamos desenvolver o conteúdo disciplina por disciplina.</p>
+    </section>
+
+    <p><a href="index.html">← Voltar aos domínios</a></p>
+  </main>
+
+  <footer>
+    <p>Meu projeto de revisão — feito com HTML e CSS.</p>
+  </footer>
+
+  <script>
+    const parametros = new URLSearchParams(window.location.search);
+    const disciplina = parametros.get("disciplina");
+    const dominio = parametros.get("dominio");
+
+    if (disciplina) {
+      document.getElementById("titulo").textContent = disciplina;
+      document.getElementById("introducao").textContent =
+        "Esta é a área de revisão de " + disciplina + ".";
+      document.title = disciplina + " | Revisão de Engenharia Mecânica";
+    }
+
+    if (dominio) {
+      document.getElementById("dominio").textContent = dominio;
+    }
+  </script>
+</body>
+</html>
