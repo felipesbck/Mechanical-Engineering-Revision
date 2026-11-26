@@ -16,61 +16,57 @@
     header {
       background: #12304a;
       color: white;
-      padding: 40px 20px;
+      padding: 48px 20px;
       text-align: center;
+    }
+
+    header p {
+      margin-bottom: 0;
     }
 
     main {
       max-width: 1050px;
-      margin: 32px auto;
+      margin: 36px auto;
       padding: 0 20px;
     }
 
     .dominios {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
     }
 
-    .dominio {
+    .cartao {
+      display: block;
+      color: inherit;
+      text-decoration: none;
       background: white;
-      padding: 20px;
+      padding: 24px;
       border-radius: 12px;
       box-shadow: 0 3px 10px #00000012;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
-    .dominio h2 {
+    .cartao:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px #00000018;
+    }
+
+    .cartao h2 {
       color: #176b87;
       font-size: 20px;
       margin-top: 0;
     }
 
-    .dominio p {
+    .cartao p {
       line-height: 1.5;
     }
 
-    .disciplinas {
-      padding-left: 20px;
-      margin-bottom: 0;
-    }
-
-    .disciplinas li {
-      margin: 8px 0;
-    }
-
-    .disciplina {
+    .cartao span {
+      display: inline-block;
+      margin-top: 8px;
       color: #176b87;
-      text-decoration: none;
-    }
-
-    .disciplina:hover {
-      text-decoration: underline;
-    }
-
-    .nota {
-      color: #667085;
-      font-size: 14px;
-      margin-top: 24px;
+      font-weight: bold;
     }
 
     footer {
@@ -84,107 +80,47 @@
 <body>
   <header>
     <h1>Revisão de Engenharia Mecânica</h1>
-    <p>Domínios e disciplinas obrigatórias do curso para estudar e revisar.</p>
+    <p>Escolha um domínio para explorar as disciplinas.</p>
   </header>
 
   <main>
-    <h2>Explore os domínios da Engenharia Mecânica</h2>
-    <p>As disciplinas estão organizadas por área. Clique no nome de uma disciplina para abrir sua página de estudo.</p>
-
-    <section class="dominios">
-      <article class="dominio">
+    <section class="dominios" aria-label="Domínios da Engenharia Mecânica">
+      <a class="cartao" href="dominio.html?dominio=Projeto%20Mec%C3%A2nico%20e%20Estruturas">
         <h2>Projeto Mecânico e Estruturas</h2>
-        <p>Desenho, análise e desenvolvimento de componentes e sistemas mecânicos.</p>
-        <ul class="disciplinas">
-        <li><a class="disciplina" href="disciplina.html?dominio=Projeto%20Mec%C3%A2nico%20e%20Estruturas&disciplina=Introdu%C3%A7%C3%A3o%20%C3%A0%20Engenharia%20Mec%C3%A2nica">Introdução à Engenharia Mecânica</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Projeto%20Mec%C3%A2nico%20e%20Estruturas&disciplina=Desenho%20T%C3%A9cnico">Desenho Técnico</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Projeto%20Mec%C3%A2nico%20e%20Estruturas&disciplina=Desenho%20Auxiliado%20por%20Computador%201">Desenho Auxiliado por Computador 1</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Projeto%20Mec%C3%A2nico%20e%20Estruturas&disciplina=Desenho%20Auxiliado%20por%20Computador%202">Desenho Auxiliado por Computador 2</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Projeto%20Mec%C3%A2nico%20e%20Estruturas&disciplina=Est%C3%A1tica">Estática</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Projeto%20Mec%C3%A2nico%20e%20Estruturas&disciplina=Din%C3%A2mica">Dinâmica</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Projeto%20Mec%C3%A2nico%20e%20Estruturas&disciplina=Mec%C3%A2nica%20dos%20S%C3%B3lidos%201">Mecânica dos Sólidos 1</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Projeto%20Mec%C3%A2nico%20e%20Estruturas&disciplina=Mec%C3%A2nica%20dos%20S%C3%B3lidos%202">Mecânica dos Sólidos 2</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Projeto%20Mec%C3%A2nico%20e%20Estruturas&disciplina=Mecanismos">Mecanismos</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Projeto%20Mec%C3%A2nico%20e%20Estruturas&disciplina=Vibra%C3%A7%C3%B5es">Vibrações</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Projeto%20Mec%C3%A2nico%20e%20Estruturas&disciplina=Elementos%20de%20M%C3%A1quinas%201">Elementos de Máquinas 1</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Projeto%20Mec%C3%A2nico%20e%20Estruturas&disciplina=Elementos%20de%20M%C3%A1quinas%202">Elementos de Máquinas 2</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Projeto%20Mec%C3%A2nico%20e%20Estruturas&disciplina=Metodologia%20de%20Projeto%20de%20Produto">Metodologia de Projeto de Produto</a></li>
-        </ul>
-      </article>
+        <p>Desenho, análise e desenvolvimento de componentes mecânicos.</p>
+        <span>Abrir domínio →</span>
+      </a>
 
-      <article class="dominio">
+      <a class="cartao" href="dominio.html?dominio=Ci%C3%AAncias%20dos%20Materiais%2C%20Fabrica%C3%A7%C3%A3o%20e%20Metrologia">
         <h2>Ciências dos Materiais, Fabricação e Metrologia</h2>
-        <p>Materiais de engenharia, processos de fabricação e controle dimensional.</p>
-        <ul class="disciplinas">
-        <li><a class="disciplina" href="disciplina.html?dominio=Ci%C3%AAncias%20dos%20Materiais%2C%20Fabrica%C3%A7%C3%A3o%20e%20Metrologia&disciplina=Materiais%20Met%C3%A1licos">Materiais Metálicos</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Ci%C3%AAncias%20dos%20Materiais%2C%20Fabrica%C3%A7%C3%A3o%20e%20Metrologia&disciplina=Materiais%20Cer%C3%A2micos%20e%20Polim%C3%A9ricos">Materiais Cerâmicos e Poliméricos</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Ci%C3%AAncias%20dos%20Materiais%2C%20Fabrica%C3%A7%C3%A3o%20e%20Metrologia&disciplina=Ensaios%20de%20Materiais">Ensaios de Materiais</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Ci%C3%AAncias%20dos%20Materiais%2C%20Fabrica%C3%A7%C3%A3o%20e%20Metrologia&disciplina=Tratamentos%20T%C3%A9rmicos">Tratamentos Térmicos</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Ci%C3%AAncias%20dos%20Materiais%2C%20Fabrica%C3%A7%C3%A3o%20e%20Metrologia&disciplina=Metrologia%20Mec%C3%A2nica">Metrologia Mecânica</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Ci%C3%AAncias%20dos%20Materiais%2C%20Fabrica%C3%A7%C3%A3o%20e%20Metrologia&disciplina=Fundi%C3%A7%C3%A3o%20e%20Conforma%C3%A7%C3%A3o%20Pl%C3%A1stica">Fundição e Conformação Plástica</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Ci%C3%AAncias%20dos%20Materiais%2C%20Fabrica%C3%A7%C3%A3o%20e%20Metrologia&disciplina=Usinagem%20Convencional">Usinagem Convencional</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Ci%C3%AAncias%20dos%20Materiais%2C%20Fabrica%C3%A7%C3%A3o%20e%20Metrologia&disciplina=Usinagem%20CNC">Usinagem CNC</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Ci%C3%AAncias%20dos%20Materiais%2C%20Fabrica%C3%A7%C3%A3o%20e%20Metrologia&disciplina=Soldagem">Soldagem</a></li>
-        </ul>
-      </article>
+        <p>Materiais, processos de fabricação e controle dimensional.</p>
+        <span>Abrir domínio →</span>
+      </a>
 
-      <article class="dominio">
+      <a class="cartao" href="dominio.html?dominio=Ci%C3%AAncias%20T%C3%A9rmicas%20e%20Energia">
         <h2>Ciências Térmicas e Energia</h2>
         <p>Energia, calor e análise de sistemas térmicos.</p>
-        <ul class="disciplinas">
-        <li><a class="disciplina" href="disciplina.html?dominio=Ci%C3%AAncias%20T%C3%A9rmicas%20e%20Energia&disciplina=Termodin%C3%A2mica%201">Termodinâmica 1</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Ci%C3%AAncias%20T%C3%A9rmicas%20e%20Energia&disciplina=Termodin%C3%A2mica%202">Termodinâmica 2</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Ci%C3%AAncias%20T%C3%A9rmicas%20e%20Energia&disciplina=Transfer%C3%AAncia%20de%20Calor%201">Transferência de Calor 1</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Ci%C3%AAncias%20T%C3%A9rmicas%20e%20Energia&disciplina=Transfer%C3%AAncia%20de%20Calor%202">Transferência de Calor 2</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Ci%C3%AAncias%20T%C3%A9rmicas%20e%20Energia&disciplina=Laborat%C3%B3rio%20de%20Ci%C3%AAncias%20T%C3%A9rmicas">Laboratório de Ciências Térmicas</a></li>
-        </ul>
-      </article>
+        <span>Abrir domínio →</span>
+      </a>
 
-      <article class="dominio">
+      <a class="cartao" href="dominio.html?dominio=Mec%C3%A2nica%20dos%20Fluidos%20e%20Sistemas%20Hidr%C3%A1ulicos">
         <h2>Mecânica dos Fluidos e Sistemas Hidráulicos</h2>
-        <p>Comportamento dos fluidos e sistemas hidráulicos e pneumáticos.</p>
-        <ul class="disciplinas">
-        <li><a class="disciplina" href="disciplina.html?dominio=Mec%C3%A2nica%20dos%20Fluidos%20e%20Sistemas%20Hidr%C3%A1ulicos&disciplina=Mec%C3%A2nica%20dos%20Fluidos%201">Mecânica dos Fluidos 1</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Mec%C3%A2nica%20dos%20Fluidos%20e%20Sistemas%20Hidr%C3%A1ulicos&disciplina=Mec%C3%A2nica%20dos%20Fluidos%202">Mecânica dos Fluidos 2</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Mec%C3%A2nica%20dos%20Fluidos%20e%20Sistemas%20Hidr%C3%A1ulicos&disciplina=Pneum%C3%A1tica%20e%20Hidr%C3%A1ulica">Pneumática e Hidráulica</a></li>
-        </ul>
-      </article>
+        <p>Fluidos e sistemas hidráulicos e pneumáticos.</p>
+        <span>Abrir domínio →</span>
+      </a>
 
-      <article class="dominio">
+      <a class="cartao" href="dominio.html?dominio=Sistemas%20Eletromec%C3%A2nicos">
         <h2>Sistemas Eletromecânicos</h2>
-        <p>Fundamentos elétricos e eletrônicos aplicados a sistemas mecânicos.</p>
-        <ul class="disciplinas">
-        <li><a class="disciplina" href="disciplina.html?dominio=Sistemas%20Eletromec%C3%A2nicos&disciplina=Eletricidade">Eletricidade</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Sistemas%20Eletromec%C3%A2nicos&disciplina=M%C3%A1quinas%20El%C3%A9tricas">Máquinas Elétricas</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Sistemas%20Eletromec%C3%A2nicos&disciplina=Eletr%C3%B4nica%20Aplicada%20%C3%A0%20Engenharia%20Mec%C3%A2nica">Eletrônica Aplicada à Engenharia Mecânica</a></li>
-        </ul>
-      </article>
+        <p>Fundamentos elétricos e eletrônicos aplicados à mecânica.</p>
+        <span>Abrir domínio →</span>
+      </a>
 
-      <article class="dominio">
+      <a class="cartao" href="dominio.html?dominio=Produ%C3%A7%C3%A3o%2C%20Gest%C3%A3o%20e%20Seguran%C3%A7a">
         <h2>Produção, Gestão e Segurança</h2>
-        <p>Organização da produção, gestão de sistemas e prática profissional.</p>
-        <ul class="disciplinas">
-        <li><a class="disciplina" href="disciplina.html?dominio=Produ%C3%A7%C3%A3o%2C%20Gest%C3%A3o%20e%20Seguran%C3%A7a&disciplina=Fundamentos%20de%20Engenharia%20de%20Seguran%C3%A7a%20do%20Trabalho">Fundamentos de Engenharia de Segurança do Trabalho</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Produ%C3%A7%C3%A3o%2C%20Gest%C3%A3o%20e%20Seguran%C3%A7a&disciplina=Sistemas%20de%20Gest%C3%A3o%20da%20Qualidade">Sistemas de Gestão da Qualidade</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Produ%C3%A7%C3%A3o%2C%20Gest%C3%A3o%20e%20Seguran%C3%A7a&disciplina=Gest%C3%A3o%20Ambiental">Gestão Ambiental</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Produ%C3%A7%C3%A3o%2C%20Gest%C3%A3o%20e%20Seguran%C3%A7a&disciplina=Gest%C3%A3o%20da%20Produ%C3%A7%C3%A3o">Gestão da Produção</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Produ%C3%A7%C3%A3o%2C%20Gest%C3%A3o%20e%20Seguran%C3%A7a&disciplina=Manuten%C3%A7%C3%A3o%20Mec%C3%A2nica">Manutenção Mecânica</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Produ%C3%A7%C3%A3o%2C%20Gest%C3%A3o%20e%20Seguran%C3%A7a&disciplina=Engenharia%20Econ%C3%B4mica">Engenharia Econômica</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Produ%C3%A7%C3%A3o%2C%20Gest%C3%A3o%20e%20Seguran%C3%A7a&disciplina=An%C3%A1lise%20de%20Custos%20Industriais">Análise de Custos Industriais</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Produ%C3%A7%C3%A3o%2C%20Gest%C3%A3o%20e%20Seguran%C3%A7a&disciplina=Gerenciamento%20de%20Projetos">Gerenciamento de Projetos</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Produ%C3%A7%C3%A3o%2C%20Gest%C3%A3o%20e%20Seguran%C3%A7a&disciplina=Empreendedorismo">Empreendedorismo</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Produ%C3%A7%C3%A3o%2C%20Gest%C3%A3o%20e%20Seguran%C3%A7a&disciplina=Economia">Economia</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Produ%C3%A7%C3%A3o%2C%20Gest%C3%A3o%20e%20Seguran%C3%A7a&disciplina=Gest%C3%A3o%20de%20Pessoas">Gestão de Pessoas</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Produ%C3%A7%C3%A3o%2C%20Gest%C3%A3o%20e%20Seguran%C3%A7a&disciplina=Psicologia%20Aplicada%20ao%20Trabalho">Psicologia Aplicada ao Trabalho</a></li>
-        <li><a class="disciplina" href="disciplina.html?dominio=Produ%C3%A7%C3%A3o%2C%20Gest%C3%A3o%20e%20Seguran%C3%A7a&disciplina=%C3%89tica%2C%20Profiss%C3%A3o%20e%20Cidadania">Ética, Profissão e Cidadania</a></li>
-        </ul>
-      </article>
+        <p>Produção, manutenção, gestão e segurança do trabalho.</p>
+        <span>Abrir domínio →</span>
+      </a>
     </section>
-
-    <p class="nota">
-      Organização baseada na matriz curricular 919 e nas disciplinas concluídas ou creditadas no histórico.
-      O ciclo básico, as optativas, o estágio, o TCC e as atividades complementares ficaram fora desta lista.
-    </p>
   </main>
 
   <footer>
