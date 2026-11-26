@@ -26,22 +26,33 @@
       padding: 0 20px;
     }
 
-    .materias {
+    .dominios {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 16px;
     }
 
-    .materia {
+    .dominio {
       background: white;
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 3px 10px #00000012;
     }
 
-    .materia h2 {
+    .dominio h2 {
       color: #176b87;
       font-size: 20px;
+      margin-top: 0;
+    }
+
+    .dominio p {
+      line-height: 1.5;
+    }
+
+    .temas {
+      color: #475467;
+      font-size: 14px;
+      line-height: 1.6;
     }
 
     footer {
@@ -59,27 +70,44 @@
   </header>
 
   <main>
-    <h2>Escolha uma matéria</h2>
+    <h2>Explore os domínios da Engenharia Mecânica</h2>
+    <p>Os temas de estudo estão organizados dentro de áreas mais amplas da engenharia.</p>
 
-    <section class="materias">
-      <article class="materia">
-        <h2>Estática</h2>
-        <p>Forças, momentos e equilíbrio de estruturas.</p>
+    <section class="dominios">
+      <article class="dominio">
+        <h2>Projeto Mecânico e Estruturas</h2>
+        <p>Projeto e análise de componentes, mecanismos e estruturas mecânicas.</p>
+        <p class="temas"><strong>Temas:</strong> estática, dinâmica, resistência dos materiais, elementos de máquinas e vibrações.</p>
       </article>
 
-      <article class="materia">
-        <h2>Resistência dos Materiais</h2>
-        <p>Tensão, deformação e comportamento dos materiais.</p>
+      <article class="dominio">
+        <h2>Ciências dos Materiais</h2>
+        <p>Relação entre a estrutura, as propriedades e o desempenho dos materiais.</p>
+        <p class="temas"><strong>Temas:</strong> propriedades, seleção de materiais, ensaios, tratamentos térmicos, fadiga, fratura e corrosão.</p>
       </article>
 
-      <article class="materia">
-        <h2>Termodinâmica</h2>
-        <p>Energia, calor, trabalho e ciclos termodinâmicos.</p>
+      <article class="dominio">
+        <h2>Fabricação e Produção</h2>
+        <p>Processos usados para transformar materiais em peças e produtos.</p>
+        <p class="temas"><strong>Temas:</strong> usinagem, soldagem, fundição, conformação, manufatura aditiva e metrologia.</p>
       </article>
 
-      <article class="materia">
+      <article class="dominio">
+        <h2>Ciências Térmicas e Energia</h2>
+        <p>Energia, calor e conversão de energia em sistemas mecânicos.</p>
+        <p class="temas"><strong>Temas:</strong> termodinâmica, transferência de calor, combustão, motores e refrigeração.</p>
+      </article>
+
+      <article class="dominio">
         <h2>Mecânica dos Fluidos</h2>
-        <p>Pressão, vazão e movimento dos fluidos.</p>
+        <p>Fluidos em repouso e em movimento, e sua interação com máquinas e superfícies.</p>
+        <p class="temas"><strong>Temas:</strong> hidrostática, escoamentos, máquinas de fluxo, aerodinâmica, hidráulica e CFD.</p>
+      </article>
+
+      <article class="dominio">
+        <h2>Controle e Mecatrônica</h2>
+        <p>Integração entre sistemas mecânicos, sensores, eletrônica e controle.</p>
+        <p class="temas"><strong>Temas:</strong> sistemas de controle, instrumentação, sensores, automação e robótica.</p>
       </article>
     </section>
   </main>
