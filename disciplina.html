@@ -71,7 +71,7 @@
       <p>Vamos desenvolver o conteúdo disciplina por disciplina.</p>
     </section>
 
-    <p><a href="index.html">← Voltar aos domínios</a></p>
+    <p><a id="voltar" href="index.html">← Voltar aos domínios</a></p>
   </main>
 
   <footer>
@@ -92,6 +92,9 @@
 
     if (dominio) {
       document.getElementById("dominio").textContent = dominio;
+      const voltar = document.getElementById("voltar");
+      voltar.href = "dominio.html?dominio=" + encodeURIComponent(dominio);
+      voltar.textContent = "← Voltar às disciplinas";
     }
   </script>
 </body>
